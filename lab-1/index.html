@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <title>E-Commerce Home</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">
+          <img src="logo.png" alt="Store Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop">Shop All</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/deals">Deals</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <form action="/search" method="get" role="search">
+          <label for="site-search">Search products:</label>
+          <input
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="Search products..."
+          />
+          <button type="submit">Search</button>
+        </form>
+        <a href="/account">Account</a>
+        <a href="/cart">Cart (0)</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2 id="featured-heading">Featured Products</h2>
+        <div class="product-grid">
+          <article>
+            <img src="product-1.jpg" alt="Featured Product 1 Title" />
+            <h3><a href="/products/product-1">Featured Product 1</a></h3>
+            <p class="price">$29.99</p>
+            <button type="button">Add to Cart</button>
+          </article>
+          <article>
+            <img src="product-2.jpg" alt="Featured Product 2 Title" />
+            <h3><a href="/products/product-2">Featured Product 2</a></h3>
+            <p class="price">$49.99</p>
+            <button type="button">Add to Cart</button>
+          </article>
+          <article>
+            <img src="product-3.jpg" alt="Featured Product 3 Title" />
+            <h3><a href="/products/product-3">Featured Product 3</a></h3>
+            <p class="price">$19.99</p>
+            <button type="button">Add to Cart</button>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="categories-heading">Shop by Category</h2>
+        <div class="category-grid">
+          <article>
+            <img src="category-electronics.jpg" alt="Electronics Category" />
+            <h3><a href="/categories/electronics">Electronics</a></h3>
+          </article>
+          <article>
+            <img src="category-apparel.jpg" alt="Apparel Category" />
+            <h3><a href="/categories/apparel">Apparel</a></h3>
+          </article>
+          <article>
+            <img src="category-home.jpg" alt="Home & Living Category" />
+            <h3><a href="/categories/home">Home & Living</a></h3>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="newsletter-heading">Stay Connected</h2>
+        <p>
+          Subscribe to our newsletter to receive exclusive offers and updates.
+        </p>
+        <form action="/subscribe" method="post">
+          <label for="newsletter-email">Email Address:</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <div>
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="/help">Help Center</a></li>
+            <li><a href="/shipping">Shipping Policy</a></li>
+            <li><a href="/returns">Returns & Exchanges</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="/about">Our Story</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/press">Press</a></li>
+            <li><a href="/sustainability">Sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/accessibility">Accessibility</a></li>
+            <li><a href="/cookies">Cookie Preferences</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <p>&copy; 2026 Generic E-Commerce Store. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

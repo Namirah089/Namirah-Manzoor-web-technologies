@@ -8,23 +8,245 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <style>
+      .mega-menu-item {
+        position: relative;
+      }
+
+      .mega-panel {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 800px;
+        background-color: white;
+        color: black;
+        padding: 15px;
+        z-index: 100;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      @media (min-width: 689px) {
+        .mega-menu-item:hover .mega-panel,
+        .mega-menu-item:focus-within .mega-panel {
+          display: grid !important;
+          grid-template-columns: repeat(5, 1fr); /* 5 columns (K = 5) */
+          gap: 15px;
+        }
+
+        .mega-panel details {
+          display: block;
+        }
+        .mega-panel summary {
+          font-weight: bold;
+          color: hsl(263, 70%, 45%);
+          margin-bottom: 8px;
+          list-style: none;
+          cursor: default;
+        }
+      }
+
+      @media (max-width: 688px) {
+        .mega-panel {
+          position: static;
+          width: 100%;
+          box-shadow: none;
+        }
+        .mega-menu-item:hover .mega-panel,
+        .mega-menu-item:focus-within .mega-panel {
+          display: block !important;
+        }
+        .mega-panel summary {
+          cursor: pointer;
+          font-weight: bold;
+          color: hsl(263, 70%, 45%);
+          padding: 6px 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav
-      class="navbar navbar-dark bg- px-3"
+      class="navbar navbar-dark px-3"
       style="background-color: rgb(216, 9, 109)"
     >
       <a class="navbar-brand" href="index.html" style="color: pink"
         >Food Panda</a
       >
-      <div>
+
+      <div class="d-flex align-items-center">
         <a class="text-white text-decoration-none me-3" href="index.html"
           >Home</a
         >
+
+        <div class="mega-menu-item d-inline-block me-3">
+          <a
+            href="#"
+            class="text-white text-decoration-none fw-bold"
+            tabindex="0"
+            >Shop by Category ▾</a
+          >
+
+          <div class="mega-panel border rounded">
+            <details>
+              <summary>Fast Food</summary>
+              <div class="category-group">
+                <h6 class="d-none d-md-block" style="color: hsl(263, 70%, 45%)">
+                  Fast Food
+                </h6>
+                <ul class="list-unstyled mb-0 small">
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Burgers</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Pizzas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Fried Chicken</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark">Fries</a>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Desi Cuisine</summary>
+              <div class="category-group">
+                <h6 class="d-none d-md-block" style="color: hsl(263, 70%, 45%)">
+                  Desi Cuisine
+                </h6>
+                <ul class="list-unstyled mb-0 small">
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Biryani</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Karahi</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Nihari</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Naan & Roti</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Beverages</summary>
+              <div class="category-group">
+                <h6 class="d-none d-md-block" style="color: hsl(263, 70%, 45%)">
+                  Beverages
+                </h6>
+                <ul class="list-unstyled mb-0 small">
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Soft Drinks</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Fresh Juices</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Milkshakes</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Chai & Coffee</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Desserts</summary>
+              <div class="category-group">
+                <h6 class="d-none d-md-block" style="color: hsl(263, 70%, 45%)">
+                  Desserts
+                </h6>
+                <ul class="list-unstyled mb-0 small">
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Ice Cream</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark">Cakes</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Gulab Jamun</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Waffles</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Groceries</summary>
+              <div class="category-group">
+                <h6 class="d-none d-md-block" style="color: hsl(263, 70%, 45%)">
+                  Groceries
+                </h6>
+                <ul class="list-unstyled mb-0 small">
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Snacks</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Dairy Products</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Bakery Items</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Frozen Food</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
         <a class="text-white text-decoration-none me-3" href="product.html"
           >Product Detail</a
         >
       </div>
+
       <button class="btn btn-outline-light">🛒 Cart (0)</button>
     </nav>
 
@@ -146,5 +368,6 @@
         &copy; 2026 My Store. All rights reserved.
       </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
